@@ -13,13 +13,6 @@
 		- [Implementación en las instalaciones](#Implementaci%C3%B3n%20en%20las%20instalaciones)
 		- [Implementación híbrida](#Implementaci%C3%B3n%20h%C3%ADbrida)
 - [Beneficios del cómputo en la nube](#Beneficios%20del%20c%C3%B3mputo%20en%20la%20nube)
-		- [Cambiar gastos iniciales por gastos variables](#Cambiar%20gastos%20iniciales%20por%20gastos%20variables)
-		- [Dejar de gastar dinero en la ejecución y mantenimiento de centros de datos](#Dejar%20de%20gastar%20dinero%20en%20la%20ejecuci%C3%B3n%20y%20mantenimiento%20de%20centros%20de%20datos)
-		- [Dejar de hacer conjeturas sobre la capacidad](#Dejar%20de%20hacer%20conjeturas%20sobre%20la%20capacidad)
-		- [Obtener beneficios de grandes economías de escala](#Obtener%20beneficios%20de%20grandes%20econom%C3%ADas%20de%20escala)
-		- [Aumentar velocidad y agilidad](#Aumentar%20velocidad%20y%20agilidad)
-		- [Convertirse en una empresa global en cuestión de minutos](#Convertirse%20en%20una%20empresa%20global%20en%20cuesti%C3%B3n%20de%20minutos)
-
 
 ## Modelo Cliente - Servidor
 

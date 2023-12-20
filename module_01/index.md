@@ -2,18 +2,32 @@
 
 **Tabla de contenido**
 
-- [[#Modelo Cliente - Servidor|Modelo Cliente - Servidor]]
-- [[#Cómputo en la nube|Cómputo en la nube]]
-	- [[#Cómputo en la nube#Modelos de informática en la nube|Modelos de informática en la nube]]
-	- [[#Cómputo en la nube#Modelos de implementación|Modelos de implementación]]
-- [[#Beneficios del cómputo en la nube|Beneficios del cómputo en la nube]]
+- [Modelo Cliente - Servidor](#Modelo%20Cliente%20-%20Servidor)
+- [Cómputo en la nube](#C%C3%B3mputo%20en%20la%20nube)
+	- [Modelos de informática en la nube](#Modelos%20de%20inform%C3%A1tica%20en%20la%20nube)
+		- [Infraestructura como servicio (IaaS)](#Infraestructura%20como%20servicio%20(IaaS))
+		- [Plataforma como servicio (PaaS)](#Plataforma%20como%20servicio%20(PaaS))
+		- [Software como servicio (SaaS)](#Software%20como%20servicio%20(SaaS))
+	- [Modelos de implementación](#Modelos%20de%20implementaci%C3%B3n)
+		- [Implementación basada en la nube](#Implementaci%C3%B3n%20basada%20en%20la%20nube)
+		- [Implementación en las instalaciones](#Implementaci%C3%B3n%20en%20las%20instalaciones)
+		- [Implementación híbrida](#Implementaci%C3%B3n%20h%C3%ADbrida)
+- [Beneficios del cómputo en la nube](#Beneficios%20del%20c%C3%B3mputo%20en%20la%20nube)
+		- [Cambiar gastos iniciales por gastos variables](#Cambiar%20gastos%20iniciales%20por%20gastos%20variables)
+		- [Dejar de gastar dinero en la ejecución y mantenimiento de centros de datos](#Dejar%20de%20gastar%20dinero%20en%20la%20ejecuci%C3%B3n%20y%20mantenimiento%20de%20centros%20de%20datos)
+		- [Dejar de hacer conjeturas sobre la capacidad](#Dejar%20de%20hacer%20conjeturas%20sobre%20la%20capacidad)
+		- [Obtener beneficios de grandes economías de escala](#Obtener%20beneficios%20de%20grandes%20econom%C3%ADas%20de%20escala)
+		- [Aumentar velocidad y agilidad](#Aumentar%20velocidad%20y%20agilidad)
+		- [Convertirse en una empresa global en cuestión de minutos](#Convertirse%20en%20una%20empresa%20global%20en%20cuesti%C3%B3n%20de%20minutos)
+
+
 ## Modelo Cliente - Servidor
 
 El `cliente` puede ser desde un navegador web, hasta una persona, lo importante es que este cliente realiza una solicitud al `servidor`, donde este último puede ser un servidor virtual, físico o algún servicio de AWS, como por ejemplo AWS EC2.
 
-![[Pasted image 20230818145635.png]]
+![Modelo Cliente Servidor](client_server_model.png)
 
-**Ejemplo:** Para poder enteder mejor este modelo pensemos en un restaurante, donde la persona que hace su pedido vendría a ser el `cliente`, y la cocina que se encarga de revisar si hay disponibilidad y entregar el pedido si es así, vendría a ser el `servidor`.
+**Ejemplo:** Para poder entender mejor este modelo pensemos en un restaurante, donde la persona que hace su pedido vendría a ser el `cliente`, y la cocina que se encarga de revisar si hay disponibilidad y entregar el pedido si es así, vendría a ser el `servidor`.
 
 ## Cómputo en la nube
 
@@ -29,23 +43,23 @@ Existen tres modelos principales de informática en la nube. Cada modelo represe
 
 La infraestructura como servicio (IaaS) constituye los bloques esenciales para la infraestructura en la nube, proporcionando acceso a funciones de red, máquinas virtuales, almacenamiento de datos y ofreciendo un alto nivel de flexibilidad y control en la gestión de recursos de TI. Se asemeja a los recursos de TI tradicionales, siendo familiar para muchos departamentos de TI y desarrolladores.
 
-Ejemplos: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP)
+**Ejemplos**: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP)
 
 #### Plataforma como servicio (PaaS)
 
 Las plataformas como servicio (PaaS) liberan a las empresas de la gestión de la infraestructura subyacente, permitiéndoles concentrarse en la implementación y administración de aplicaciones. Esto mejora la eficacia al eliminar preocupaciones como el aprovisionamiento de recursos, la planificación de capacidad y el mantenimiento de software, simplificando la ejecución de aplicaciones.
 
-Ejemplos: [Heroku](https://www.heroku.com/what), [Google App Engine](https://cloud.google.com/appengine?hl=es-419), [Microsoft Azure App Service](https://learn.microsoft.com/es-es/azure/app-service/overview)
+**Ejemplos**: [Heroku](https://www.heroku.com/what), [Google App Engine](https://cloud.google.com/appengine?hl=es-419), [Microsoft Azure App Service](https://learn.microsoft.com/es-es/azure/app-service/overview)
 #### Software como servicio (SaaS)
 
 El software como servicio (SaaS) proporciona un producto completo gestionado por el proveedor del servicio, especialmente aplicaciones de usuario final. Con SaaS, los usuarios no deben preocuparse por el mantenimiento del servicio o la gestión de la infraestructura subyacente. Solo necesitan centrarse en el uso de la aplicación. Un ejemplo común es un programa de correo electrónico basado en la web, donde los usuarios pueden enviar y recibir mensajes sin preocuparse por la administración de funciones ni el mantenimiento de servidores y sistemas operativos.
 
-Ejemplos: Microsoft 365, [Salesforce](https://www.salesforce.com/mx/products/what-is-salesforce/), Google Workspace (Docs, Sheets, Presentations, Gmail, etc)
+**Ejemplos**: Microsoft 365, [Salesforce](https://www.salesforce.com/mx/products/what-is-salesforce/), Google Workspace (Docs, Sheets, Presentations, Gmail, etc)
 ### Modelos de implementación
 
 Existen tres modelos de implementación de la nube: implementación basada en la nube, implementación en las instalaciones e implementación híbrida.
 
-### Implementación basada en la nube
+#### Implementación basada en la nube
 
 - Ejecución de todas las partes de una aplicación en la nube
 - Migración de las aplicaciones existentes a la nube
@@ -53,20 +67,20 @@ Existen tres modelos de implementación de la nube: implementación basada en la
 
 Por ejemplo: una empresa podría crear una aplicación compuesta por servidores virtuales, bases de datos y componentes de red totalmente basados en la nube.
 
-### Implementación en las instalaciones
+#### Implementación en las instalaciones
 
 También conocida como implementación en la ***nube privada***.
 
 - Implementación de recursos mediante herramientas de virtualización y administración de recursos
 - Aumento de la utilización de recursos mediante tecnologías de virtualización y administración de aplicaciones
 
-Por ejemplo: es posible que tenga aplicaciones que se ejecutan con tecnología que se almacena por completo en su centro de datos local. Aunque este modelo se parece mucho a la [infraestructura de TI heredada](https://blog-es.lac.tdsynnex.com/infraestructura-heredada-por-que-puede-costar-muy-caro-y-como-solucionar-el-problema), su incorporación de tecnologías de virtualización y administración de aplicaciones ayuda a aumentar la utilización de los recursos.
-### Implementación híbrida
+**Por ejemplo**: es posible que tenga aplicaciones que se ejecutan con tecnología que se almacena por completo en su centro de datos local. Aunque este modelo se parece mucho a la [infraestructura de TI heredada](https://blog-es.lac.tdsynnex.com/infraestructura-heredada-por-que-puede-costar-muy-caro-y-como-solucionar-el-problema), su incorporación de tecnologías de virtualización y administración de aplicaciones ayuda a aumentar la utilización de los recursos.
+#### Implementación híbrida
 
 - Conexión de los recursos basados en la nube a la infraestructura en las instalaciones
 - Integración de los recursos basados en la nube con aplicaciones TI heredadas
 
-Por ejemplo: supongamos que una empresa desea utilizar servicios en la nube que pueden automatizar el procesamiento y el análisis de datos por lotes. Sin embargo, la empresa tiene varias aplicaciones heredadas que son más adecuadas en las instalaciones y no se migrarán a la nube. Con una implementación híbrida, la empresa podría mantener las aplicaciones heredadas en las instalaciones y beneficiarse de los servicios de datos y análisis que se ejecutan en la nube.
+**Por ejemplo**: supongamos que una empresa desea utilizar servicios en la nube que pueden automatizar el procesamiento y el análisis de datos por lotes. Sin embargo, la empresa tiene varias aplicaciones heredadas que son más adecuadas en las instalaciones y no se migrarán a la nube. Con una implementación híbrida, la empresa podría mantener las aplicaciones heredadas en las instalaciones y beneficiarse de los servicios de datos y análisis que se ejecutan en la nube.
 
 ## Beneficios del cómputo en la nube
 

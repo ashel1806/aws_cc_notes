@@ -16,7 +16,7 @@
 
 ## Modelo Cliente - Servidor
 
-El `cliente` puede ser desde un navegador web, hasta una persona, lo importante es que este cliente realiza una solicitud al `servidor`, donde este último puede ser un servidor virtual, físico o algún servicio de AWS, como por ejemplo AWS EC2.
+El `cliente` puede ser desde un navegador web hasta una persona. Lo importante es que este cliente realiza una solicitud al `servidor`, donde este último puede ser un servidor virtual, físico o algún servicio de AWS, como por ejemplo AWS EC2.
 
 ![Modelo Cliente Servidor](client_server_model.png)
 

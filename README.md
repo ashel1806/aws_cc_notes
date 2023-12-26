@@ -2,7 +2,7 @@ Formato de commit:
 
 [module]:[action] text
 
-Ejemplo: modulo02:add add a image to explain aws well architected framework
+Ejemplo: module02:add add a image to explain aws well architected framework
 
 Acciones:
 

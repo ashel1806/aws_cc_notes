@@ -28,6 +28,14 @@ El concepto de **nube** hace referencia a los recursos TI que pueden ser entrega
 
 Es decir, AWS (la nube en este caso) nos brinda los recursos que queremos cuando los necesitamos. De igual forma, si ya no queremos algún recurso, simplemente con un clic lo deshabilitamos e inmediatamente dejamos de pagar por ese recurso.
 
+En resumen, podemos definir el cómputo en la nube en AWS con los siguientes puntos:
+
+1. **Auto servicio bajo demanda**: ya como hemos mencionado, podemos solicitar y deshabilitar recursos cuando lo necesitemos.
+2. **Acceso a internet**: Los recursos los podemos solicitar desde la consola de AWS (en un navegador como Google Chrome), usando una interfaz de línea de comandos, o usando una API (Application Programming Interface)
+3. **Recursos compartidos/agrupados**: AWS provee una basta cantidad de recursos para servir a una gran cantidad de clientes.
+4. **Elasticidad**: Es la capacidad de poder escalar nuestros recursos en AWS en base a la demanda que tengamos, si la demanda aumenta nosotros podemos hacer que nuestros recursos escalen para poder soportar esa demanda, si esa demanda disminuye nosotros podemos disminuir nuestros recursos para no estar pagando de más.
+5. **Monitoreo y facturación de uso de recursos**: con AWS nosotros podemos monitorear el uso de nuestros recursos y controlar la facturación de estos.
+
 ### Modelos de informática en la nube
 
 Existen tres modelos principales de informática en la nube. Cada modelo representa una parte distinta de la pila de informática en la nube.
@@ -99,3 +107,47 @@ La flexibilidad de la computación en la nube facilita el desarrollo e implement
 #### Convertirse en una empresa global en cuestión de minutos
   
 La amplia presencia global de la nube de AWS permite una rápida implementación de aplicaciones para clientes de todo el mundo, garantizando baja latencia. Esto posibilita que los clientes accedan a las aplicaciones con mínimos retrasos, incluso si se encuentran en diferentes partes del mundo. 
+
+## Infraestructura global de AWS
+
+Los conceptos relevantes para este primer dominio son las regiones, availability zones y edge locations. Para beneficiarnos de esta infraestructura global necesitamos que nuestras aplicaciones sean diseñadas para: gran disponibilidad, tolerancia a fallos y recuperación a desastres.
+
+#### Gran disponibilidad (High availability)
+Con esto nos referimos a que nuestra aplicación pueda responder rápidamente a cualquier error que suceda, con el objetivo que nuestra app siga funcionando. No importa si nuestra aplicación deja de funcionar por un tiempo (corto). 
+
+Ejemplo: 
+
+Supongamos que tenemos una aplicación ejecutándose dentro de un servidor en AWS la cual es usada por nuestros empleados para hacer su trabajo
+
+![](high_availability_01.png)
+
+Si este servidor se "cae" (deja de funcionar) entonces los empleados no pueden hacer su trabajo. Si diseñamos nuestra aplicación para que sea "altamente disponible", entonces podríamos rápidamente levantar otro servidor de respaldo que pueda usar la aplicación para que nuestros empleados sigan haciendo su trabajo.
+
+![](high_availability_02.png)
+
+Incluso podríamos haber definido desde el inicio dos servidores, uno donde la aplicación se ejecute (sería un servidor un modo activo) y otro de respaldo (sería un servidor en modo espera), de esta forma cuando el servidor activo se "caiga", el servidor en modo de espera entraría en acción para hacer que la aplicación siga funcionando.
+
+![](high_availability_03.png)
+
+Esto puede ocasionar que nuestros empleados necesiten iniciar sesión nuevamente, lo cual quiere decir que nuestra aplicación estuvo "caída" por un corto tiempo, lo que es aceptado cuando nuestra aplicación está diseñada para tener una alta disponibilidad.
+
+#### Tolerancia a fallos (Fault tolerance)
+Es similar a cuando nuestra aplicación está diseñada para una alta disponibilidad, pero en este caso la aplicación ya no tiene ningún tiempo de "caida", es decir, nuestra aplicación seguirá funcionando incluso si se presenta algún error.
+
+> ***Nota**: Diseñar nuestra aplicaciones para que tengan tolerancia a fallos generalmente resulta ser más caro que diseñar nuestras aplicaciones para que tengan alta disponibilidad. Elegir entre una u otra dependerá del tipo de aplicación que estemos desarrollando.*
+
+Ejemplo:
+
+Retomemos el ejemplo anterior, si diseñáramos la aplicación para que tenga tolerancia a fallos tendríamos que tener dos servidores (instancias) en modo activo, de esta forma nuestra aplicación se ejecuta en esas dos instancias al mismo tiempo y si una de las dos deja de funcionar la aplicación se sigue ejecutando pero solo en una de las instancias, sin necesidad de que los empleados tengan que iniciar sesión nuevamente.
+
+![](fault_tolerance_01.png)
+
+
+
+#### Recuperación a desastres (Disaster recovery)
+Este sistema de diseño es diferente a los dos anteriores, ya que en este caso nos referimos a que nuestra aplicación debe ser capaz de seguir funcionando incluso si ocurre un desastre. Para ello debemos contar con un plan que contenga pasos a seguir para hacer todo el proceso mucho más fácil.
+
+> Este sistema de diseño en AWS hace referencia por ejemplo a que si nuestra aplicación se está ejecutando dentro de la región US-East, y dentro de esa región ocurre un desastre o un fallo masivo que hace que nuestra aplicación deje de funcionar, nosotros deberíamos ser capaces de "migrar" o "llevar" nuestra aplicación hacia otra región dentro de AWS, por ejemplo US-West, de tal forma que nuestra aplicación siga funcionando.
+
+![](disaster_recovery_01.png)
+

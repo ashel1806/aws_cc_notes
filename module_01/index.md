@@ -13,6 +13,10 @@
 		- [Implementación en las instalaciones](#Implementaci%C3%B3n%20en%20las%20instalaciones)
 		- [Implementación híbrida](#Implementaci%C3%B3n%20h%C3%ADbrida)
 - [Beneficios del cómputo en la nube](#Beneficios%20del%20c%C3%B3mputo%20en%20la%20nube)
+- [Infraestructura global de AWS](#Infraestructura%20global%20de%20AWS)
+	- [Gran disponibilidad (High availability)](#Gran%20disponibilidad%20(High%20availability))
+	- [Tolerancia a fallos (Fault tolerance)](#Tolerancia%20a%20fallos%20(Fault%20tolerance))
+	- [Recuperación a desastres (Disaster recovery)](#Recuperaci%C3%B3n%20a%20desastres%20(Disaster%20recovery))
 
 ## Modelo Cliente - Servidor
 
@@ -35,7 +39,7 @@ En resumen, podemos definir el cómputo en la nube en AWS con los siguientes pun
 3. **Recursos compartidos/agrupados**: AWS provee una basta cantidad de recursos para servir a una gran cantidad de clientes.
 4. **Elasticidad**: Es la capacidad de poder escalar nuestros recursos en AWS en base a la demanda que tengamos, si la demanda aumenta nosotros podemos hacer que nuestros recursos escalen para poder soportar esa demanda, si esa demanda disminuye nosotros podemos disminuir nuestros recursos para no estar pagando de más.
 
-	Básicamente es hacer que el ![escalamiento horizontal](../common_concepts/scaling.md#Escalamiento%20Horizontal) sea automático
+	Básicamente es hacer que el [escalamiento horizontal](../common_concepts/scaling.md#Escalamiento%20Horizontal) sea automático
  
 5. **Monitoreo y facturación de uso de recursos**: con AWS nosotros podemos monitorear el uso de nuestros recursos y controlar la facturación de estos.
 
@@ -115,7 +119,7 @@ La amplia presencia global de la nube de AWS permite una rápida implementación
 
 Los conceptos relevantes para este primer dominio son las regiones, availability zones y edge locations. Para beneficiarnos de esta infraestructura global necesitamos que nuestras aplicaciones sean diseñadas para: gran disponibilidad, tolerancia a fallos y recuperación a desastres.
 
-#### Gran disponibilidad (High availability)
+### Gran disponibilidad (High availability)
 Con esto nos referimos a que nuestra aplicación pueda responder rápidamente a cualquier error que suceda, con el objetivo que nuestra app siga funcionando. No importa si nuestra aplicación deja de funcionar por un tiempo (corto). 
 
 Ejemplo: 
@@ -134,7 +138,7 @@ Incluso podríamos haber definido desde el inicio dos servidores, uno donde la a
 
 Esto puede ocasionar que nuestros empleados necesiten iniciar sesión nuevamente, lo cual quiere decir que nuestra aplicación estuvo "caída" por un corto tiempo, lo que es aceptado cuando nuestra aplicación está diseñada para tener una alta disponibilidad.
 
-#### Tolerancia a fallos (Fault tolerance)
+### Tolerancia a fallos (Fault tolerance)
 Es similar a cuando nuestra aplicación está diseñada para una alta disponibilidad, pero en este caso la aplicación ya no tiene ningún tiempo de "caida", es decir, nuestra aplicación seguirá funcionando incluso si se presenta algún error.
 
 > ***Nota**: Diseñar nuestra aplicaciones para que tengan tolerancia a fallos generalmente resulta ser más caro que diseñar nuestras aplicaciones para que tengan alta disponibilidad. Elegir entre una u otra dependerá del tipo de aplicación que estemos desarrollando.*
@@ -145,9 +149,7 @@ Retomemos el ejemplo anterior, si diseñáramos la aplicación para que tenga to
 
 ![](fault_tolerance_01.png)
 
-
-
-#### Recuperación a desastres (Disaster recovery)
+### Recuperación a desastres (Disaster recovery)
 Este sistema de diseño es diferente a los dos anteriores, ya que en este caso nos referimos a que nuestra aplicación debe ser capaz de seguir funcionando incluso si ocurre un desastre. Para ello debemos contar con un plan que contenga pasos a seguir para hacer todo el proceso mucho más fácil.
 
 > Este sistema de diseño en AWS hace referencia por ejemplo a que si nuestra aplicación se está ejecutando dentro de la región US-East, y dentro de esa región ocurre un desastre o un fallo masivo que hace que nuestra aplicación deje de funcionar, nosotros deberíamos ser capaces de "migrar" o "llevar" nuestra aplicación hacia otra región dentro de AWS, por ejemplo US-West, de tal forma que nuestra aplicación siga funcionando.

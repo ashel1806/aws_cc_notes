@@ -34,6 +34,9 @@ En resumen, podemos definir el cómputo en la nube en AWS con los siguientes pun
 2. **Acceso a internet**: Los recursos los podemos solicitar desde la consola de AWS (en un navegador como Google Chrome), usando una interfaz de línea de comandos, o usando una API (Application Programming Interface)
 3. **Recursos compartidos/agrupados**: AWS provee una basta cantidad de recursos para servir a una gran cantidad de clientes.
 4. **Elasticidad**: Es la capacidad de poder escalar nuestros recursos en AWS en base a la demanda que tengamos, si la demanda aumenta nosotros podemos hacer que nuestros recursos escalen para poder soportar esa demanda, si esa demanda disminuye nosotros podemos disminuir nuestros recursos para no estar pagando de más.
+
+	Básicamente es hacer que el ![escalamiento horizontal](../common_concepts/scaling.md#Escalamiento%20Horizontal) sea automático
+ 
 5. **Monitoreo y facturación de uso de recursos**: con AWS nosotros podemos monitorear el uso de nuestros recursos y controlar la facturación de estos.
 
 ### Modelos de informática en la nube
